@@ -1,0 +1,89 @@
+/*google font*/
+@import url("https://fonts.googleapis.com/css2?family=Trispace:wght@300&display=swap");
+/*fontawesome*/
+body {
+    font-family: "Trispace", monospace;
+    color: white;
+}
+.navbar,
+footer {
+    background-color: #15202b;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+section {
+    padding-top: 6rem;
+}
+#hello {
+    background-color: #192734;
+}
+#form {
+    background-color: #192734;
+}
+#about,
+#projects {
+    background-color: #22303c;
+}
+.sosial-media {
+    letter-spacing: 20px;
+}
+.bi-github,
+.bi-linkedin,
+.bi-facebook {
+    color: white;
+    transition: 0.5s;
+}
+.bi-github:hover {
+    color: #000;
+    font-size: 40px;
+}
+.bi-linkedin:hover {
+    color: #2867b2;
+    font-size: 40px;
+}
+.bi-facebook:hover {
+    color: #3b5998;
+    font-size: 40px;
+}
+.btn:focus,
+.btn:active,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.pp {
+    box-shadow: -15px -15px #192734;
+}
+.h2 {
+    text-shadow: 3px 3px gray;
+}
+.sosial-media a {
+    font-size: 2rem;
+    margin-right: 0px;
+    color: white;
+}
+.table-white {
+    background-color: #192734;
+    color: #fff;
+    box-shadow: -15px -15px #15202b;
+}
+.form-check-input.form-check-lg {
+    transform: scale(1.2);
+}
+
+
+.custom-button {
+    background-color: #15202b; /* Ganti dengan warna yang Anda inginkan */
+    color: #fff; /* Warna teks tombol */
+    border-radius: 20px;
+    border: 1px solid #fff; /* Hapus jika Anda ingin menghilangkan garis */
+}
+
+.custom-button:hover {
+    background-color: #09386b; /* Warna saat tombol dihover (opsional) */
+    color: #fff; /* Warna teks tombol */
+}
