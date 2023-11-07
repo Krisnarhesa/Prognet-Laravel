@@ -56,7 +56,7 @@
                     </div>
                     <div class="row justify-content-center mb-5">
                         <div class="col-md-50">
-                            <form method="post" action="/UpdateStudentData/{{ $data->id }}">
+                            <form method="post" enctype="multipart/form-data" action="/UpdateStudentData/{{ $data->id }}">
                                 @csrf
                                 @method('PUT')
                                 <div class="col-12 mb-3">
@@ -95,7 +95,7 @@
                                 <div class="col-12 mb-3">
                                 <label for="inputPassword" class="form-label">Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" name="Password" id="inputPassword" value="{{ $data->Password }}" required />
+                                    <input type="password" class="form-control" name="Password" id="inputPassword" value="{{ $data->Password }}" required minlength="8" />
                                     <button type="button" class="btn btn-secondary" id="togglePassword">
                                         <i class="fa fa-eye" id="eyeIcon"></i>
                                     </button>
@@ -158,10 +158,15 @@
                                     <input type="range" class="form-control" name="Range" id="inputRange" min="0" max="100" step="1" value="{{ $data->Skills_range }}"/>
                                 </div>
                                 <div class="col-12 mb-3">
-                                    <label for="inputFile" class="form-label">Upload Your Profile Picture</label>
-                                    <input type="file" class="form-control" name="File" id="inputFile" value="{{ $data->Profile_picture }}"/>
-                                <div class="col-12 mb-3">
-                                </div>
+                <label for="inputFile" class="form-label">Your Profile Picture</label><br>
+                @if($data->Profile_picture)
+                <div class = "row justify-content-center mb-5">
+                <img src="{{ asset('storage/' . $data->Profile_picture) }}" alt="Profile Picture" class="mb-2" width="150">
+                </div>
+                @endif
+                <label for="inputFile" class="form-label">Reupload Your Profile Picture</label>
+                <input type="file" class="form-control" name="File" id="inputFile" accept="image/jpeg, image/png, image/jpg"/>
+                </div>
                                 <div class="form-check form-switch" class="col-12 mb-3">
                                     <label class="form-check-label" for="inputPersonalTerms">I Agree to the Terms and Conditions</label>
                                     <input class="form-check-input form-check-lg" type="checkbox" name="PersonalTerms" id="inputPersonalTerms" @if ( $data -> Terms == 'on') {{ "checked" }} @endif required >

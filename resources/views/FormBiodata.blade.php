@@ -93,7 +93,7 @@
                                 <div class="col-12 mb-3">
                                 <label for="inputPassword" class="form-label">Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" name="Password" id="inputPassword"  required />
+                                    <input type="password" class="form-control" name="Password" id="inputPassword"  required minlength="8" />
                                     <button type="button" class="btn btn-secondary" id="togglePassword">
                                         <i class="fa fa-eye" id="eyeIcon"></i>
                                     </button>
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="inputFile" class="form-label">Upload Your Profile Picture</label>
-                                    <input type="file" class="form-control" name="File" id="inputFile" required/>
+                                    <input type="file" class="form-control" name="File" id="inputFile" accept="image/jpeg, image/png, image/jpg"required/>
                                 </div>
                                 <div class="form-check form-switch" class="col-12 mb-3">
                                     <label class="form-check-label" for="inputPersonalTerms">I Agree to the Terms and Conditions</label>

@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center mb-5">
-                        <div class="col-md-50">
+                        <div class="col-md-100">
                         <div class="container mt-5">
     <table class="table table-borderless table-white">
         <tbody>
@@ -112,8 +112,13 @@
                     <td>: {{ $data->Skills_range }}</td>
                 </tr>
                 <tr>
-                    <td><strong>Profile Picture</strong></td>
-                    <td>: <img src="{{ $data->Profile_picture }}" alt="Profile Picture" style="max-width: 100px; max-height: 100px;">
+                <tr>
+                <td><strong>Profile Picture</strong></td>
+                <td><br>:
+                <div class="profile-picture-container">
+                    <img src="{{ asset('storage/' . $data->Profile_picture) }}" alt="{{ $data->Profile_picture }}" class="profile-picture">
+                </div>
+                </td>
                 </tr>
                 <tr>
                     <td><strong>Terms</strong></td>
@@ -128,7 +133,7 @@
     </table>
 </div>
 <div class="col-12 mb-3">
-    <button class="w-100 btn btn-primary" onclick="location.href='/StudentListData'">Back To List Data Form</button>
+    <button class="w-100 btn btn-primary custom-button2" onclick="location.href='/StudentListData'">Back To List Data Form</button>
 </div>
 
                             </div>
